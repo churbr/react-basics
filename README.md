@@ -30,13 +30,13 @@ Having reusable building blocks help us avoid repetition. Programming in general
 
 Having a separation of concern helps us with keeping our code base small, manageable and easy to maintain instead of having one large file which holds all the HTML code. Basically, don't do too many things in one and same place (function). So, we can split big chunks of code into multiple smaller functions.
 
-### React Code is built In A 'Declarative Way'
+##### React Code is built In A 'Declarative Way'
 
 In React, a declarative approach is a programming paradigm where you describe what you want to acheive, rather than explicitly specifying the step-by-step instructions/commands/logic of the code for acheiving it.
 
 This approach is in contrast to an imperative approach, where you provide explicit instructions on how to manipulate the DOM or update the user interface in response to changes in data or user interactions.
 
-### Difference between Declarative Programming vs Imperative
+##### Difference between Declarative Programming vs Imperative
 
 The difference between declarative and imperative code is that imperative code focuses on writing an explicit sequence of commands to describe how you want the program to do things while declarative code focuses on specifying the result of what you want to acheive.
 
