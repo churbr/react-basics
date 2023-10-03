@@ -146,6 +146,6 @@ _And what it does is basically return that HTML elements wrapped around return()
 </div>
 ```
 
-_This basic block of code above is called **JSX**._
+This basic block of code above is called  _JavaScript Syntax Extension_ or **JSX**.
 
 </details>
