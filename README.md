@@ -80,7 +80,7 @@ root.render(<App />);
 * ```const root = ReactDOM.createRoot()``` :  This creates the main entry point of the overall user interface you are about to build with React. That's the idea behind createRoot() hook, and what this does is it tells React where this React application (the user interface), should be placed in the web page that is loaded.
 * ```document.getElementById('root')``` : This argument inside createRoot() function retrieves an HTML element with the id of 'root' from DOM. Once retrieved, react components will be set to be rendered here. This is typically a div or another DOM element in your HTML document.
 * ```root.render()``` : Renders the component specified inside its argument.
-* ```<App />``` : This argument inside root.render() is the main component. This will return a JSX code that will then be rendered to the root DOM element and shown in the user interface.
+* ```<App />``` : This argument inside root.render() function is the main/root component in the Component tree. This will return a JSX code that will then be rendered to the root DOM element and shown in the user interface.
 
 </details>
 
