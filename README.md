@@ -22,11 +22,11 @@ Inside a component is just a combination of HTML & CSS for styling and JavaScrip
 
 ### Why Components?
 
-##### Reusability
+##### :arrows_counterclockwise: Reusability
 
 Having reusable building blocks help us avoid repetition. Programming in general, it is good if we don't repeat ourselves.
 
-##### Separation of Concerns
+##### :left_right_arrow: Separation of Concerns
 
 Having a separation of concern helps us with keeping our code base small, manageable and easy to maintain instead of having one large file which holds all the HTML code. Basically, don't do too many things in one and same place (function). So, we can split big chunks of code into multiple smaller functions.
 
