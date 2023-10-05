@@ -30,16 +30,6 @@ Having reusable building blocks help us avoid repetition. Programming in general
 
 Having a separation of concern helps us with keeping our code base small, manageable and easy to maintain instead of having one large file which holds all the HTML code. Basically, don't do too many things in one and same place (function). So, we can split big chunks of code into multiple smaller functions.
 
-##### React Code is built In A 'Declarative Way'
-
-In React, a declarative approach is a programming paradigm where you describe what you want to acheive, rather than explicitly specifying the step-by-step instructions/commands/logic of the code for acheiving it.
-
-This approach is in contrast to an imperative approach, where you provide explicit instructions on how to manipulate the DOM or update the user interface in response to changes in data or user interactions.
-
-##### Difference between Declarative Programming vs Imperative
-
-The difference between declarative and imperative code is that imperative code focuses on writing an explicit sequence of commands to describe how you want the program to do things while declarative code focuses on specifying the result of what you want to acheive.
-
 ### The Directory Structure
 
 We will be focusing on the ```src/``` directory at this point since all of the code we will be working on are inside this folder.
@@ -80,7 +70,7 @@ root.render(<App />);
 * ```const root = ReactDOM.createRoot()``` :  This creates the main entry point of the overall user interface you are about to build with React. That's the idea behind createRoot() hook, and what this does is it tells React where this React application (the user interface), should be placed in the web page that is loaded.
 * ```document.getElementById('root')``` : This argument inside createRoot() function retrieves an HTML element with the id of 'root' from DOM. Once retrieved, react components will be set to be rendered here. This is typically a div or another DOM element in your HTML document.
 * ```root.render()``` : Renders the component specified inside its argument.
-* ```<App />``` : This argument inside root.render() function is the main/root component in the Component tree. This will return a JSX code that will then be rendered to the root DOM element and shown in the user interface.
+* ```<App />``` : This argument inside root.render() function is the main/root component in the Component tree. This will return a JSX code that will then be rendered to the root DOM element and bring onto the user's screen or the User Interface.
 
 </details>
 
@@ -149,3 +139,20 @@ _And what it does is basically return that HTML elements wrapped around return()
 This basic block of code above is called  _JavaScript Syntax Extension_ or **JSX**.
 
 </details>
+
+### How React Works
+
+To explain how React works, let's first discuss about the programming paradigm its using.
+
+There are 2 types of programming paradigm:
+
+1) ```Declarative approach``` : Declarative approach is a type of programming paradigm where you simply describe what you want to acheive. In this case with React, you describe how your User Interface should look. And React takes care of everything in the background like updating the DOM to match that description.
+
+2) ```Imperative approach``` : Explicitly specifying the step-by-step instructions of the code for acheiving it. Where you provide explicit instructions on how to manipulate the DOM or update the user interface in response to changes in data or user interactions.
+
+:clipboard: _React Code built In A 'Declarative Way'_
+
+| Declarative | Imperative |
+| ------------- | ------------- |
+| <pre>function App() {&#13;&nbsp;return (&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<h2\>Let's get started!\</h2\> &#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<p\>This is another paragraph!\</p\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</div\>&#13;&nbsp;);&#13;}</pre>&#13;_Using our existing JSX code, we simply put ```<p>This is another paragraph!</p>``` in the code below the H2 heading. And done! We have a simple paragraph on the screen right away. We can also transfer it anywhere within the JSX and it will update the UI base on where you put it. Its easy and straightforward._ | <pre>const paragraph = document.createElement('p');&#13;paragraph.textContent = 'This is another paragraph!';&#13;document.getElementById('root').append(paragraph);&#13;&#13;&#13;&#13;&#13;</pre> &#13;&#13;&#13;&#13;&#13;_In the code above, you can see there are multiple lines of regular javascript codes just to produce a simple paragraph on the screen. These lines of code works, but it can get cumbersome when complex user interfaces with dozens and hundreds of elements, which also might be changing (some codes are removed and edited) all the time. Having to write all these instructions makes it complicated. Hard to manage and prone to bugs. And would be problematic in the long run._  |
+
