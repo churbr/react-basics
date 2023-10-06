@@ -1,12 +1,16 @@
 import './ExpenseItem.css'
 
 function ExpenseItem() {
+  const expenseDate = new Date(2023, 10, 6);
+  const expenseItem = 'Dolce & Gabanna (Eau De Parfum) - The One';
+  const expensePrice = 138.55;
+
   return (
     <div className="expense-item">
-      <div className="expense-item__description">July. 05, 2023</div>
+      <div className="expense-item__description">{expenseDate.toDateString()}</div>
       <div>
-        <div>Dolce & Gabanna (Eau De Parfum) - The One</div>
-        <div className="expense-item__price">$138.55</div>
+        <div>{expenseItem}</div>
+        <div className="expense-item__price">${expensePrice}</div>
       </div>
     </div>
   );
