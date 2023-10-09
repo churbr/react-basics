@@ -2,7 +2,7 @@ import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 import Card from '../UI/Card';
 
-function ExpenseItem({ item, price, date }) { // Object destructuring
+const ExpenseItem = ({ item, price, date }) => { // Object destructuring
   return (
     <Card className="expense-item">
       <ExpenseDate date={date} />
