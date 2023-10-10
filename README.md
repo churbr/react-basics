@@ -24,6 +24,25 @@ Component is simply just a combination of HTML & CSS for styling. And JavaScript
 
 ![HTML, CSS, JAVASCRIPT TO COMPONENT](./docs/CSSHTMLJS_REACTJS.drawio.png)
 
+### What is JSX?
+
+JSX is the HTML code inside the component.
+
+```javascript
+function MyComponent() {
+  return (
+    // Start of JSX here...
+    <div>
+      <h2>Hello World!</h2>
+    </div>
+    // End of JSX code here...
+  );
+}
+export default MyComponent;
+```
+
+_But wait!_ It is not really HTML. It looks like HTML, but it is a special JSX syntax invented by the creators of React. But in the background, it's still JavaScript code. To explain this, go to "How React Works" section.
+
 ### Why Components?
 
 ##### :arrows_counterclockwise: Reusability
