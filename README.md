@@ -24,7 +24,7 @@ Component is simply just a combination of HTML & CSS for styling. And JavaScript
 
 ![HTML, CSS, JAVASCRIPT TO COMPONENT](./docs/CSSHTMLJS_REACTJS.drawio.png)
 
-### What is JSX?
+### So, what is JSX?
 
 JSX is the HTML code inside the component.
 
