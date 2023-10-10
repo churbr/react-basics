@@ -16,11 +16,13 @@ _What exactly is a Component?_
 
 Components are the building blocks that make up the user interface. So, basically _individual parts of the UI_.
 
-_i.e: Header, Image, Forms, Sidebar, Body, Footer, etc._.
+Below is an example of a page composed of components as building blocks. You can see that there is a ```Navigation Menu```, ```User Info```, ```Search Bar```, ```Product``` and ```Button``` components. You can also see that some of the components are repeating like the Product and Button component, that demonstrates the reusability of it.
 
-Inside a component is just a combination of HTML & CSS for styling and JavaScript code for some logic. They are combined together into a single unit of code.
+![PAGE COMPONENTS](./docs/PageComponents.drawio.png)
 
-![Inheritance Class Diagram](./docs/CSSHTMLJS_REACTJS.drawio.png)
+Component is simply just a combination of HTML & CSS for styling. And JavaScript for some logic/behavior. They are combined together into a single unit of code to do one task.
+
+![HTML, CSS, JAVASCRIPT TO COMPONENT](./docs/CSSHTMLJS_REACTJS.drawio.png)
 
 ### Why Components?
 
