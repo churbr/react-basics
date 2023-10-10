@@ -18,9 +18,9 @@ Components are the building blocks that make up the user interface. So, basicall
 
 _i.e: Header, Image, Forms, Sidebar, Body, Footer, etc._.
 
-Inside a component is just a combination of HTML & CSS for styling and JavaScript code for some logic. They are combined together into a single code called Component.
+Inside a component is just a combination of HTML & CSS for styling and JavaScript code for some logic. They are combined together into a single unit of code.
 
-![Inheritance Class Diagram](./docs/CSSHTMLJS_REACTJS.png)
+![Inheritance Class Diagram](./docs/CSSHTMLJS_REACTJS.drawio.png)
 
 ### Why Components?
 
@@ -158,9 +158,3 @@ There are 2 types of programming paradigm:
 | ------------- | ------------- |
 | <pre>function App() {&#13;&nbsp;return (&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<h2\>Let's get started!\</h2\> &#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<p\>This is another paragraph!\</p\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</div\>&#13;&nbsp;);&#13;}</pre>&#13;_Using our existing JSX code, we simply put ```<p>This is another paragraph!</p>``` in the code below the H2 heading. And done! We have a simple paragraph on the screen right away. We can also transfer it anywhere within the JSX and it will update the UI base on where you put it. Its easy and straightforward._ | <pre>// Step 1: Create a new paragraph element&#13;const paragraph = document.createElement('p');&#13;&#13;// Step 2: Create text content &#13;const text = document.createTextNode('This is another paragraph!');&#13;&#13;// Step 3: Append the text to the paragraph element&#13;paragraph.appendChild(text);&#13;&#13;// Step 4: Append the paragraph element to the document body&#13;document.body.appendChild(paragraph);&#13;</pre> _In the code above, you can see there are multiple lines of regular javascript codes just to produce a simple paragraph on the screen. These lines of code works, but it can get cumbersome when complex user interfaces with dozens and hundreds of elements, which also might be changing (some codes are removed and edited) all the time. Having to write all these instructions makes it complicated. Hard to manage and prone to bugs. And would be problematic in the long run._  |
 
-
-A component in React is just a javascript function.
-Component filename should be the same with the component function name, convention!
-JXS: that this here is not really HTML. It looks like HTML, but it's this special JSX syntax invented by the React team. And in the end under the hood, it's still JavaScript code,
-HTML, CSS, Javascript - > Component
-<ComponentName attributeName={value} />
