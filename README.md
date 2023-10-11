@@ -179,3 +179,44 @@ There are 2 types of programming paradigm:
 | ------------- | ------------- |
 | <pre>function App() {&#13;&nbsp;return (&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<h2\>Let's get started!\</h2\> &#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<p\>This is another paragraph!\</p\>&#13;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\</div\>&#13;&nbsp;);&#13;}</pre>&#13;_Using our existing JSX code, we simply put ```<p>This is another paragraph!</p>``` in the code below the H2 heading. And done! We have a simple paragraph on the screen right away. We can also transfer it anywhere within the JSX and it will update the UI base on where you put it. Its easy and straightforward._ | <pre>// Step 1: Create a new paragraph element&#13;const paragraph = document.createElement('p');&#13;&#13;// Step 2: Create text content &#13;const text = document.createTextNode('This is another paragraph!');&#13;&#13;// Step 3: Append the text to the paragraph element&#13;paragraph.appendChild(text);&#13;&#13;// Step 4: Append the paragraph element to the document body&#13;document.body.appendChild(paragraph);&#13;</pre> _In the code above, you can see there are multiple lines of regular javascript codes just to produce a simple paragraph on the screen. These lines of code works, but it can get cumbersome when complex user interfaces with dozens and hundreds of elements, which also might be changing (some codes are removed and edited) all the time. Having to write all these instructions makes it complicated. Hard to manage and prone to bugs. And would be problematic in the long run._  |
 
+<br />
+
+_The main goal of React is to make building of User Interfaces simpler, efficient & flexible. They acheived that using Components._
+
+Devs only have to write simple and easy to understand codes. And React will take care of everything in the background to transform it into something that the browser can understand.
+
+**Part 1: Creating UI using JSX**
+So, let's say we want to print something on the screen. An H2 header that prints _"Hello React!"_. And below this H2 header, is another text _"Welcome to this page!"_. But the text is rendered from a separate component. The component name is PrintWelcome.
+
+First, we create a PrintWelcome component and use it on main App component.
+
+> **Note**
+> Component naming convention: Component filename & function name should be the same
+
+```javascript
+function PrintWelcome() {
+  return (
+    <div>
+      <p>Welcome to this page!</p>
+    </div>
+  );
+}
+export default PrintWelcome;
+```
+
+```javascript
+import PrintWelcome from './PrintWelcome';
+
+function App() {
+  return (
+    <div>
+      <h2>Hello React!</div>
+      <PrintWelcome />
+    </div>
+  );
+}
+export default App;
+```
+
+<br />
+
