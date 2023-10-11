@@ -186,32 +186,32 @@ _The main goal of React is to make building of User Interfaces simpler, efficien
 Devs only have to write simple and easy to understand codes. And React will take care of everything in the background to transform it into something that the browser can understand.
 
 **Part 1: Creating UI using JSX**
-So, let's say we want to print something on the screen. An H2 header that prints _"Hello React!"_. And below this H2 header, is another text _"Welcome to this page!"_. But the text is rendered from a separate component. The component name is PrintWelcome.
+So, let's say we want to print something on the screen. An H2 header that prints _"Hello React!"_. And below this H2 header, is another text _"Welcome to this page!"_. But the text is rendered from a separate component. The component name is Welcome.
 
-First, we create a PrintWelcome component and use it on main App component.
+First, we create a Welcome component and use it on main App component.
 
 > **Note**
 > Component naming convention: Component filename & function name should be the same
 
 ```javascript
-function PrintWelcome() {
+function Welcome() {
   return (
     <div>
       <p>Welcome to this page!</p>
     </div>
   );
 }
-export default PrintWelcome;
+export default Welcome;
 ```
 
 ```javascript
-import PrintWelcome from './PrintWelcome';
+import Welcome from './Welcome';
 
 function App() {
   return (
     <div>
       <h2>Hello React!</div>
-      <PrintWelcome />
+      <Welcome />
     </div>
   );
 }
