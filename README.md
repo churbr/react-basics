@@ -240,6 +240,8 @@ This transformation is done using a core function from React API:
 >
 > More about [```React.createElement()```](https://react.dev/reference/react/createElement).
 
+<br />
+
 :information_source: Additional Info:
 - The ```...children``` parameter of React.createElement() can also accept a component, not only limited to html elements.
 - When you're going to create another element within a container element, that's another nested React.createElement()
