@@ -238,7 +238,8 @@ This transformation is done using a core function from React API:
 > 
 > ➣ **...children**: The HTML element(s) that is contained in your root element. You can have as many nested elements as you want.
 >
-> More about [```React.createElement()```](https://react.dev/reference/react/createElement).
+>
+> _More about: [```React.createElement()```](https://react.dev/reference/react/createElement)_
 
 <br />
 
