@@ -260,11 +260,11 @@ This transformation is done using a core function from React API:
 
 In the code, we are expecting a structure to have 2 React.createElement() functions inside main React.createElement(). This is how it looks:
 ```javascript
-  return React.createElement(                         // 1) Main React.createElement() function execution
+  return React.createElement(                         // 1) 1st function call: Main React.createElement()
     'div',                                            // 2) Creates a root element <div>
-    {},                                               // 3) Root element <div> doesn't receive any props
-    React.createElement('h2', {}, "Hello React!"),    // 4) Creates the first child element <h2> with text content 'Hello React!'. And empty props. {}
-    React.createElement(Welcome, {})                  // 5) Last child is a Component <Welcome /> without props.
+    {},                                               // 3) Root element <div> doesn't receive any props, so put {}.
+    React.createElement('h2', {}, "Hello React!"),    // 4) 2nd function call: Creates the first child element <h2> with text content 'Hello React!'. And empty props.
+    React.createElement(Welcome, {})                  // 5) 3rd function call: Last child is a Component <Welcome /> without props to receive.
   );                                                  //    (A component is still a function that can be called and returns different output base on given values)
 ```
 
