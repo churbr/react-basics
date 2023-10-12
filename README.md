@@ -223,12 +223,9 @@ export default App;
 #### Part 2: Behind the scene
 Now, that we're done with the JSX. Behind the scene, React then compiles the JSX code and transforms it to another form of code that the browser can understand.
 
-This transformation is done using the [```React.createElement()```](https://react.dev/reference/react/createElement) from the core React API.
-
+This transformation is done using a core function from React API:
 <details>
 <summary>React.createElement()</summary>
-
-<br />
 
 > **Note**
 > ```React.createElement(type, props, ...children)```
@@ -241,17 +238,16 @@ This transformation is done using the [```React.createElement()```](https://reac
 > 
 > ➣ **...children**: The HTML element(s) that is contained in your root element. You can have as many nested elements as you want.
 >
-> :information_source: Additional Info:
-> 
-> • The ```...children``` parameter of React.createElement() can also accept a component, not only limited to html elements.
-> 
-> • When you're going to create another element within a container element, that's another nested React.createElement()_
+> More about [```React.createElement()```](https://react.dev/reference/react/createElement).
 
+:information_source: Additional Info:
+- The ```...children``` parameter of React.createElement() can also accept a component, not only limited to html elements.
+- When you're going to create another element within a container element, that's another nested React.createElement()
 </details>
 
-##### Here are the steps:
+<br />
 
-:green_circle: React finds the root element in App component. In this case, its a div.
+:green_circle: **Step 1:** React finds the root element in App component. In this case, its a div.
 
 > **Important**
 > At the very beginning, React.createElement() is only looking for one main root element. This element will contain all the child elements.
@@ -260,7 +256,7 @@ This transformation is done using the [```React.createElement()```](https://reac
 
 <br />
 
-:green_circle: Remember the JSX of App component in Part 1? Our root element is a div. And wrapped inside it is an \<h2\> element, and a component \<Welcome \/>. So, total of 2 elements.
+:green_circle: **Step 2:** Remember the JSX of App component in Part 1? Our root element is a div. And wrapped inside it is an \<h2\> element, and a component \<Welcome \/>. So, total of 2 elements.
 
 In the code, we are expecting a structure to have 2 React.createElement() functions inside main React.createElement(). This is how it looks:
 ```javascript
