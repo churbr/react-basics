@@ -259,7 +259,7 @@ This transformation is done using a core function from React API:
 
 <br />
 
-:green_circle: **Step 2:** Remember the JSX of App component in Part 1? Our root element is a div. And wrapped inside it is an \<h2\> element, and a component \<Welcome \/>. So, total of 2 elements.
+:green_circle: **Step 2:** Remember the JSX of App component in Part 1? Our root element is a ```<div>```. And wrapped inside it is an ```<h2>``` header element and a component ```<Welcome />```. So, total of 2 elements.
 
 In the code, we are expecting a structure to have 2 React.createElement() functions inside main React.createElement(). This is how it looks:
 ```javascript
