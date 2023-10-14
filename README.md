@@ -210,7 +210,7 @@ import Welcome from './Welcome';
 function App() {
   return (
     <div>
-      <h2>Hello React!</div>
+      <h2>Hello React!</h2>
       <Welcome />
     </div>
   );
@@ -221,7 +221,7 @@ export default App;
 <br />
 
 #### Part 2: Behind the scene
-Now, that we're done with the JSX. Behind the scene, React then compiles the JSX code and transforms it to another form of code that the browser can understand.
+Now, that we're done with the JSX. Behind the scene, React then transpiles the JSX code and transforms it to another form of code that the browser can understand.
 
 This transformation is done using a core function from React API:
 <details>
@@ -250,7 +250,7 @@ This transformation is done using a core function from React API:
 
 <br />
 
-:green_circle: **Step 1:** React finds the root element in App component. In this case, its a div.
+:green_circle: **Step 1:** Refer to the JSX code in Part 1. React calls the createElement() function. And the function finds the root element in App component. In this case, its a ```div```.
 
 > **Important**
 > At the very beginning, React.createElement() is only looking for one main root element. This element will contain all the child elements.
@@ -259,7 +259,7 @@ This transformation is done using a core function from React API:
 
 <br />
 
-:green_circle: **Step 2:** Remember the JSX of App component in Part 1? Our root element is a ```<div>```. And wrapped inside it is an ```<h2>``` header element and a component ```<Welcome />```. So, total of 2 elements.
+:green_circle: **Step 2:** Wrapped inside root is an ```<h2>``` header element and a component ```<Welcome />```. Total of 2 elements.
 
 In the code, we are expecting a structure to have 2 React.createElement() functions inside main React.createElement(). This is how it looks:
 ```javascript
@@ -271,12 +271,38 @@ In the code, we are expecting a structure to have 2 React.createElement() functi
   );                                                  //    (A component is still a function that can be called and returns different output base on given values)
 ```
 
-Above code is equivalent to JSX code below:
+React.createElement() function returns a plain JavaScript object that describes the overall structure of JSX. This includes the element's type, props, and children. The example code above would look like this:
+
 ```javascript
-return (
-  <div>
-    <h2>Hello React!</h2>
-    <Welcome />
-  </div>
-);
+{
+  $$typeof : Symbol(react.element),
+  key: null,
+  props: {
+    children: { // Array(2)
+      0: {
+        $$typeof : Symbol(react.element),
+        key: null,
+        props: {
+          children: 'Hello React!',
+        },
+        ref: null,
+        type: 'h2'
+      },
+      1 : {
+        $$typeof : Symbol(react.element),
+        key: null,
+        props: {},
+        ref: null,
+        type: { // f Welcome()
+          length: 0,
+          name: 'Welcome'
+        }
+      }
+    }
+  },
+  ref: null,
+  type: 'div'
+}
 ```
+
+These React elements are then used by React to build and update the Virtual DOM (lightweight, in-memory representation of the actual DOM). When changes occur in your application's state, React uses the Virtual DOM to efficiently calculate and apply the minimal set of changes needed to update the real DOM, optimizing performance and minimizing re-rendering.
