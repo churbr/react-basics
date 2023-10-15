@@ -305,4 +305,9 @@ React.createElement() function returns a plain JavaScript object that describes 
 }
 ```
 
-These React elements are then used by React to build and update the Virtual DOM (lightweight, in-memory representation of the actual DOM). When changes occur in your application's state, React uses the Virtual DOM to efficiently calculate and apply the minimal set of changes needed to update the real DOM, optimizing performance and minimizing re-rendering.
+The object will then be used by React to build and update the **Virtual DOM** (_a lightweight, in-memory representation of the actual DOM_).
+
+
+> **Note**
+> When changes occur in your application's state, React uses the Virtual DOM to efficiently calculate and apply the minimal set of changes needed to update the real DOM, optimizing performance and minimizing re-rendering.
+
