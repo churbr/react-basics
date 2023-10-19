@@ -7,9 +7,9 @@ const ExpenseForm = () => {
   // const [date, setDate] = useState("");
 
   const [input, setInput] = useState({
-    title: '',
-    amount: '',
-    date: ''
+    title: "",
+    amount: "",
+    date: "",
   });
 
   // const titleChangeHandler = (e) => {
@@ -40,43 +40,63 @@ const ExpenseForm = () => {
   // };
 
   const inputChangeHandler = (input, value) => {
-    switch(input) {
-      case 'title':
+    switch (input) {
+      case "title":
         setInput((prevState) => {
           return {
             ...prevState,
-            title: value
-          }
+            title: value,
+          };
         });
-      break;
+        break;
 
-      case 'amount':
+      case "amount":
         setInput((prevState) => {
           return {
             ...prevState,
-            amount: value
-          }
+            amount: value,
+          };
         });
-      break;
+        break;
 
       default:
         setInput((prevState) => {
           return {
             ...prevState,
-            date: value
-          }
+            date: value,
+          };
         });
-      break;
-
+        break;
     }
+  };
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const data = {
+      ...input,
+      date: new Date(input.date)
+      /**
+       * Code above, we use the spread operator to unpack the data, i.e: input.title, input.amount
+       * And we don't have to explicitly set the object like this: { title: input.title, amount: input.amount}. Why?
+       * Because they already have the same keys (title, amount). It's a shortcut. 
+       * So, it's like simply putting it like so: { title, amount, date: new Date(input.date) }
+       **/
+    }
+
+    console.log('Data: ', data);
   }
 
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" value={input.title} onChange={(e) => inputChangeHandler('title', e.target.value)} />
+          <input
+            type="text"
+            value={input.title}
+            onChange={(e) => inputChangeHandler("title", e.target.value)}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -85,7 +105,7 @@ const ExpenseForm = () => {
             value={input.amount}
             min="0.01"
             step="0.01"
-            onChange={(e) => inputChangeHandler('amount', e.target.value)}
+            onChange={(e) => inputChangeHandler("amount", e.target.value)}
           />
         </div>
         <div className="new-expense__control">
@@ -95,7 +115,7 @@ const ExpenseForm = () => {
             value={input.date}
             min="2023-10-19"
             max="2024-10-19"
-            onChange={(e) => inputChangeHandler('date', e.target.value)}
+            onChange={(e) => inputChangeHandler("date", e.target.value)}
           />
         </div>
       </div>
