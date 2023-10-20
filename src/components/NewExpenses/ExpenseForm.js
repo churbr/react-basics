@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   // const [title, setTitle] = useState("");
   // const [amount, setAmount] = useState("");
   // const [date, setDate] = useState("");
@@ -84,7 +84,11 @@ const ExpenseForm = () => {
        **/
     }
 
-    console.log('Data: ', data);
+    props.onSaveExpenseData(data);
+    /**
+     * This props.onSaveExpenseData() is an attribute that holds a function from NewExpense (parent) component.
+     * That function will then be called and gets the data from this child component.
+     **/
   }
 
   return (

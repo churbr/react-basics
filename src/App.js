@@ -21,6 +21,9 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (input) => { // input: Expense input from NewExpense (child component)
+    console.log('App.js: ', input);
+  }
 
   /** Parameters: 
    * 
@@ -44,7 +47,7 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
